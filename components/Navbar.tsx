@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Utensils, Phone } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Navbar() {
@@ -93,15 +93,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="https://wa.me/919876543210"
+            <Link
+              href="https://maakhana-survey.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 bg-gradient-to-r from-orange-400 to-orange-500 text-black px-6 py-3 rounded-full font-semibold w-full btn-shine"
             >
               <Phone className="w-4 h-4" />
               <span>Order Now</span>
-            </a>
+            </Link>
           </div>
         </div>
       )}
