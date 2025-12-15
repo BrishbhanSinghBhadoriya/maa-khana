@@ -52,15 +52,15 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <a
-              href="https://wa.me/919876543210"
+            <Link
+              href="https://maakhana-survey.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-black px-6 py-2.5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg pulse-glow btn-shine"
             >
               <Phone className="w-4 h-4" />
               <span>Order Now</span>
-            </a>
+            </Link>
           </div>
 
           <button

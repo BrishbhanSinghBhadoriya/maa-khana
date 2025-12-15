@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Sunrise, Utensils, Moon, Flame, Heart, Clock, DollarSign, Shield, Star } from 'lucide-react';
+import { ArrowRight, Sunrise, Utensils, Moon, Flame, Heart, Clock, DollarSign, Shield, Star, Check, X, IndianRupee } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -54,7 +54,7 @@ export default function Home() {
       description: 'Pick your time slot. We deliver when you need it.',
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee,
       title: 'Actually Affordable',
       description: 'No hidden costs. No surge pricing. Just fair prices.',
     },
@@ -127,10 +127,12 @@ export default function Home() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/survey"
+                href="https://maakhana-survey.vercel.app/"
                 className="inline-flex items-center space-x-2 glass-effect px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300 gradient-border"
+                target="_blank"
               >
-                <span>Pass the Vibe Check</span>
+                <span>Order Food Now</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
@@ -155,27 +157,79 @@ export default function Home() {
       </section>
 
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-4xl mx-auto">
-          <div className="card-premium p-8 md:p-12 rounded-3xl">
-            <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-6 text-center">
-              Yo! <span className="wave inline-block animate-bounce">👋</span>
-            </h2>
-            <div className="space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
-              <p>
-                Living in <span className="text-primary font-semibold">Noida</span> or{' '}
-                <span className="text-primary font-semibold">Greater Noida</span> usually means oily PG food or
-                overpriced delivery apps.
-              </p>
-              <p className="text-2xl md:text-3xl font-poppins font-bold text-gradient text-glow">
-                MAAKHANA fixes that.
-              </p>
-              <p>
-                We bring you <span className="text-primary font-semibold">healthy, home-cooked meals</span> at prices
-                that won't make you broke. Whether you miss ghar ka khana or you're grinding at the gym,
-                we've got your back.
-              </p>
+      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-orange-500/5 skew-y-3 transform origin-top-left pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+            {/* The Problem (The Struggle) */}
+            <div className="space-y-6 order-2 lg:order-1 opacity-0 animate-slide-up stagger-1">
+              <div className="bg-red-50/50 backdrop-blur-sm border border-red-100 p-8 rounded-3xl relative">
+                <h3 className="text-2xl font-poppins font-bold text-red-800 mb-6 flex items-center">
+                  <span className="bg-red-100 p-2 rounded-lg mr-3">�</span>
+                  The Struggle
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3 text-red-900/80">
+                    <X className="w-5 h-5 mt-1 flex-shrink-0 text-red-500" />
+                    <p>Oily, unhealthy PG food that ruins your gut.</p>
+                  </div>
+                  <div className="flex items-start space-x-3 text-red-900/80">
+                    <X className="w-5 h-5 mt-1 flex-shrink-0 text-red-500" />
+                    <p>Overpriced delivery apps draining your wallet.</p>
+                  </div>
+                  <div className="flex items-start space-x-3 text-red-900/80">
+                    <X className="w-5 h-5 mt-1 flex-shrink-0 text-red-500" />
+                    <p>Unreliable tiffin services with zero hygiene.</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* The Solution (Maakhana) */}
+            <div className="order-1 lg:order-2 opacity-0 animate-slide-up stagger-2">
+              <div className="card-premium p-8 md:p-10 rounded-3xl border-2 border-orange-500/20 relative">
+                <div className="absolute top-0 right-0 p-4 opacity-10">
+                  <div className="text-9xl">✨</div>
+                </div>
+                <h2 className="text-3xl md:text-5xl font-poppins font-bold mb-6">
+                  Enter <span className="text-gradient text-glow">MAAKHANA</span>
+                </h2>
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                  We fixed the daily food chaos. Healthy, home-style meals that fit your vibe and your budget.
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center space-x-3">
+                    <div className="bg-green-100 p-1.5 rounded-full text-green-600">
+                      <Check className="w-4 h-4" />
+                    </div>
+                    <span className="font-medium text-foreground">Healthy & Home-cooked</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="bg-green-100 p-1.5 rounded-full text-green-600">
+                      <Check className="w-4 h-4" />
+                    </div>
+                    <span className="font-medium text-foreground">Pocket-friendly Prices</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="bg-green-100 p-1.5 rounded-full text-green-600">
+                      <Check className="w-4 h-4" />
+                    </div>
+                    <span className="font-medium text-foreground">Zero Compromise on Taste</span>
+                  </div>
+                </div>
+
+                <Link
+                  href="/meal-plans"
+                  className="inline-flex items-center font-semibold text-orange-600 hover:text-orange-700 transition-colors group"
+                >
+                  <span>Check our Menu</span>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

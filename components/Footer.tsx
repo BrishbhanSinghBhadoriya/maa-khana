@@ -107,7 +107,7 @@ export default function Footer() {
             </ul>
             <div className="mt-6 space-y-4">
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/93157 09293"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-black px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 btn-shine w-full"
