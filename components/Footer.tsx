@@ -24,9 +24,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-br from-orange-300 to-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 icon-box-glow">
-                <Utensils className="w-6 h-6 text-black" />
-              </div>
+              <div className="w-10 h-10 bg-white-500 rounded-xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 icon-box-glow">
+                          <Image
+                         src="/maa_khaana.png"
+                          alt="Food Icon"
+                            width={50}
+                         height={50}
+                          className="object-contain"
+                             />
+                         </div>
               <span className="text-2xl font-poppins font-bold text-gradient">
                 MAAKHANA
               </span>
@@ -88,13 +94,13 @@ export default function Footer() {
             <h3 className="text-lg font-poppins font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="tel:+919876543210"
+                <Link
+                  href="tel:+919325709293"
                   className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-200 text-sm"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>+91 98765 43210</span>
-                </a>
+                  <span>+91 9325709293</span>
+                </Link>
               </li>
               <li>
                 <a
@@ -108,7 +114,7 @@ export default function Footer() {
             </ul>
             <div className="mt-6 space-y-4">
               <a
-                href="https://wa.me/93157 09293"
+                href="https://wa.me/919315709293"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-black px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-105 btn-shine w-full"
@@ -190,7 +196,7 @@ export default function Footer() {
               <Link href="/privacy" className="hover:text-primary transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-primary transition-colors">
+              <Link href="/term-of-service" className="hover:text-primary transition-colors">
                 Terms of Service
               </Link>
             </div>
