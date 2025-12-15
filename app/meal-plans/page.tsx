@@ -91,7 +91,7 @@ export default function MealPlans() {
       discount: '10%',
       price: '₹1,260',
       originalPrice: '₹1,400',
-      features: ['2 Meals Daily', 'Pick Breakfast/Lunch/Dinner', 'Free Delivery', 'Flexible Menu','Nutrition Consultation'],
+      features: ['2 Meals Daily', 'Pick Breakfast/Lunch/Dinner', 'Free Delivery', 'Flexible Menu', 'Nutrition Consultation'],
     },
     {
       name: 'Monthly Plan',
@@ -181,14 +181,14 @@ export default function MealPlans() {
                   {meal.price}
                 </div>
 
-                <a
-                  href="https://wa.me/919876543210"
+                <Link
+                  href="https://maakhana-survey.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-black px-4 py-3 rounded-xl font-semibold text-center transition-all duration-300 transform hover:scale-105 shadow-lg btn-shine"
                 >
                   Order Now
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -252,14 +252,14 @@ export default function MealPlans() {
                   {meal.price}
                 </div>
 
-                <a
-                  href="https://wa.me/919876543210"
+                <Link
+                  href="https://maakhana-survey.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black px-4 py-3 rounded-xl font-semibold text-center transition-all duration-300 transform hover:scale-105 shadow-lg btn-shine"
                 >
                   Order Now
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -277,73 +277,73 @@ export default function MealPlans() {
             </p>
           </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-  {subscriptionPlans.map((plan) => (
-    <div
-      key={plan.name}
-      className={`card-premium rounded-3xl p-8 relative h-full flex flex-col
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            {subscriptionPlans.map((plan) => (
+              <div
+                key={plan.name}
+                className={`card-premium rounded-3xl p-8 relative h-full flex flex-col
       ${plan.popular ? 'border-2 border-primary shadow-2xl scale-105 z-10' : ''}`}
-    >
-      {/* Title */}
-      <div className="text-center mb-6">
-        <h3 className="text-3xl font-poppins font-bold mb-2">
-          {plan.name}
-        </h3>
-        <p className="text-muted-foreground">
-          {plan.meals}
-        </p>
-      </div>
+              >
+                {/* Title */}
+                <div className="text-center mb-6">
+                  <h3 className="text-3xl font-poppins font-bold mb-2">
+                    {plan.name}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {plan.meals}
+                  </p>
+                </div>
 
-      {/* Price */}
-      <div className="text-center mb-6">
-        <div className="flex items-center justify-center space-x-3 mb-2">
-          <span className="text-5xl font-poppins font-bold text-gradient">
-            {plan.price}
-          </span>
-        </div>
+                {/* Price */}
+                <div className="text-center mb-6">
+                  <div className="flex items-center justify-center space-x-3 mb-2">
+                    <span className="text-5xl font-poppins font-bold text-gradient">
+                      {plan.price}
+                    </span>
+                  </div>
 
-        <div className="flex items-center justify-center space-x-2">
-          <span className="text-muted-foreground line-through">
-            {plan.originalPrice}
-          </span>
-          <span className="bg-green-500 text-black text-xs font-bold px-2 py-1 rounded">
-            Save {plan.discount}
-          </span>
-        </div>
-      </div>
+                  <div className="flex items-center justify-center space-x-2">
+                    <span className="text-muted-foreground line-through">
+                      {plan.originalPrice}
+                    </span>
+                    <span className="bg-green-500 text-black text-xs font-bold px-2 py-1 rounded">
+                      Save {plan.discount}
+                    </span>
+                  </div>
+                </div>
 
-      {/* Features */}
-      <div className="border-t border-white/10 pt-6 mb-6 flex-grow">
-        <ul className="space-y-4">
-          {plan.features.map((feature) => (
-            <li key={feature} className="flex items-center space-x-3">
-              <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                <Check className="w-4 h-4 text-black" />
-              </div>
-              <span className="text-foreground">
-                {feature}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
+                {/* Features */}
+                <div className="border-t border-white/10 pt-6 mb-6 flex-grow">
+                  <ul className="space-y-4">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-center space-x-3">
+                        <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                          <Check className="w-4 h-4 text-black" />
+                        </div>
+                        <span className="text-foreground">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-      {/* CTA Button */}
-      <a
-        href="https://wa.me/919876543210"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`mt-auto flex items-center justify-center space-x-2 w-full px-6 py-4 rounded-xl 
+                {/* CTA Button */}
+                <Link
+                  href="https://maakhana-survey.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-auto flex items-center justify-center space-x-2 w-full px-6 py-4 rounded-xl 
         font-semibold text-lg transition-all duration-300 transform hover:scale-105
         bg-orange-400 hover:bg-orange-500 text-black shadow-md
         ${plan.popular ? 'shadow-lg glow-orange' : ''}`}
-      >
-        <Phone className="w-5 h-5" />
-        <span>Subscribe Now</span>
-      </a>
-    </div>
-  ))}
-</div>
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Subscribe Now</span>
+                </Link>
+              </div>
+            ))}
+          </div>
 
         </div>
       </section>
