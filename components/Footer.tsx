@@ -7,9 +7,11 @@ export default function Footer() {
 
   const quickLinks = [
     { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
     { href: '/meal-plans', label: 'Meal Plans' },
     { href: '/how-it-works', label: 'How It Works' },
     { href: '/survey', label: 'Early Access' },
+    { href: '/contact_us', label: 'Contact Us' },
   ];
 
   const socialLinks = [
@@ -87,6 +89,10 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <span>Noida Extension</span>
               </li>
+              <li className="flex items-start space-x-2">
+                <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span>Delhi  (Coming SOON !)</span>
+              </li>
             </ul>
           </div>
 
@@ -95,11 +101,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="tel:+919325709293"
+                  href="tel:+919315709293"
                   className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors duration-200 text-sm"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>+91 9325709293</span>
+                  <span>+91 9315709293</span>
                 </Link>
               </li>
               <li>
@@ -190,7 +196,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm text-center md:text-left">
-              {currentYear} MAAKHANA. All rights reserved. Made with love for Gen-Z.
+              {currentYear} MAAKHANA. All rights reserved. Made with love for next-gen hustlers.
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <Link href="/privacy" className="hover:text-primary transition-colors">
