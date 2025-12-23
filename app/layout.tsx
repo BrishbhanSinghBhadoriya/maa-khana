@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
-
+import { Inter, Poppins, Outfit } from 'next/font/google';
+import LenisProvider from '@/components/LenisProvider';
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
@@ -12,6 +12,12 @@ const poppins = Poppins({
   weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
   variable: '--font-poppins',
+  display: 'swap',
+});
+
+const liquidGlass = Outfit({
+  subsets: ['latin'],
+  variable: '--font-liquidglass',
   display: 'swap',
 });
 
@@ -57,9 +63,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+
+      <body className={`${inter.variable} ${poppins.variable} ${liquidGlass.variable} font-sans antialiased`}>
+        <LenisProvider>
+          {children}
+        </LenisProvider>
+
       </body>
     </html>
   );
