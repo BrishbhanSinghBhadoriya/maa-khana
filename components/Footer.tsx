@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Instagram, Facebook, Twitter, Mail, MapPin, Phone, ArrowUpRight, Heart } from 'lucide-react';
+import { Instagram, Facebook,  Mail, MapPin, Phone, ArrowUpRight, Heart } from 'lucide-react';
+import { FaXTwitter } from "react-icons/fa6";
 import Image from 'next/image';
 
 export default function Footer() {
@@ -17,7 +18,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: Instagram, href: 'https://instagram.com/maakhana', label: 'Instagram', gradient: 'hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500' },
     { icon: Facebook, href: 'https://facebook.com/maakhana', label: 'Facebook', gradient: 'hover:bg-blue-600' },
-    { icon: Twitter, href: 'https://twitter.com/maakhana', label: 'Twitter', gradient: 'hover:bg-sky-500' },
+   { icon: FaXTwitter, href: "https://x.com/maakhana", label: "X",  gradient: "hover:bg-black hover:text-white transition-colors duration-200"}
   ];
 
   return (
@@ -85,9 +86,9 @@ export default function Footer() {
             <h4 className="font-poppins font-bold text-foreground mb-6 uppercase tracking-wider text-sm">Service Areas</h4>
             <ul className="space-y-3">
               {[
-                { name: 'Noida Sector 62', status: 'active' },
                 { name: 'Greater Noida', status: 'active' },
-                { name: 'Noida Extension', status: 'active' },
+                { name: 'Noida Sector 62', status: 'coming' },
+                { name: 'Noida Extension', status: 'coming' },
                 { name: 'Delhi', status: 'coming' },
               ].map((area) => (
                 <li key={area.name} className="flex items-center gap-3 text-sm text-muted-foreground">
@@ -113,13 +114,13 @@ export default function Footer() {
                 </div>
               </a>
 
-              <a href="mailto:hello@maakhana.com" className="flex items-center gap-3 p-3 rounded-xl bg-white border border-border hover:border-primary/50 transition-colors group">
+              <a href="mailto:maakhanafoodservice@gmail.com" className="flex items-center gap-3 p-3 rounded-xl bg-white border border-border hover:border-primary/50 transition-colors group">
                 <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground font-medium">Email Us</p>
-                  <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">hello@maakhana.com</p>
+                  <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">maakhanafoodservice@gmail.com</p>
                 </div>
               </a>
             </div>
@@ -134,6 +135,7 @@ export default function Footer() {
           <div className="flex gap-6 text-sm font-medium text-muted-foreground">
             <Link href="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-primary transition-colors">Terms</Link>
+            <Link href="/refund" className="hover:text-primary transition-colors">Refund</Link>
           </div>
         </div>
       </div>
